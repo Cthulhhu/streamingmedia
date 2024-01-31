@@ -2,6 +2,7 @@
 audio::-webkit-media-controls-mute-button {
     border-radius: 100px;
     background-color: #ffffff;
+    opacity: 1;
 }
 audio::-webkit-media-controls-play-button {
     border-radius: 100px;
@@ -72,8 +73,7 @@ label {
     padding: 28px 20px;
     position: relative;
     user-select: none;
-    top: 0;
-    width: 20px;
+
 }
 
 label span {
@@ -81,7 +81,7 @@ label span {
     display: block;
     height: 2px;
     position: relative;
-    transition: background-color .2s ease-out;
+    transition: background-color 0.2s ease-out;
     width: 18px;
 }
 
@@ -91,7 +91,7 @@ label span:before, label span:after {
     display: block;
     height: 100%;
     position: absolute;
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
     width: 100%;
 }
 
@@ -139,7 +139,7 @@ body {
 }
 
 h1 {
-    margin: 15px 0 5px 34px;
+    margin: 7px 0 5px 30px;
     font-size: 1.25em;
     font-weight: bold;
     text-transform: uppercase;
@@ -151,6 +151,7 @@ li {
     background-color: #030a8c;
     padding: 5px 0;
     text-align: center;
+    padding: 5px 0;
 }
 
 ul li:nth-child(1) a,  ul li:nth-child(1) a:visited,  ul li:nth-child(1) a:hover,  ul li:nth-child(1) a:active {
@@ -163,7 +164,7 @@ ul li:nth-child(1) a,  ul li:nth-child(1) a:visited,  ul li:nth-child(1) a:hover
 
 }
 
-ul li:nth-child(1) a,  ul li:nth-child(1) a:visited,  ul li:nth-child(1) a:hover,  ul li:nth-child(1) a:active {
+ul li:nth-child(n + 2) a, ul li:nth-child(n + 2) a:visited, ul li:nth-child(n + 2) a:hover, ul li:nth-child(n + 2) a:active {
     text-transform: uppercase;
 }
 
@@ -177,7 +178,7 @@ li:hover {
 }
 
 header p {
-    margin: 10px 30px 5px 30px;
+    margin: 10px 30px 15px 30px;
 }
 
 h2, h3 {
@@ -190,7 +191,7 @@ p, dl, dt, dd {
 
 dd, dt {
     color: #590242;
-    margin: 0 2px 0 5px;
+    margin: -10px 3px 0 5px;
 }
 
 dt {
@@ -249,25 +250,25 @@ footer p {
     height: 50px;
     padding: 5px;
     width: 350px;
-    top: 250px;
+    top: 25px;
     position: absolute;
     background-color: rgba(255, 255, 255, .5);
 }
 
 h2 {
     color: #590242;
-    margin: 25px 0 5px 30px;
+    margin: 30px 0 5px 30px;
     text-transform: uppercase;
     font-weight: bold;
 }
 
 #trending .scroll h3 {
-    margin: 5px 0 8px 5px;
+    margin: 4px 0 8px 5px;
     color: #590242;
 }
 
 #playlists .scroll h3, #curated .scroll h3 {
-    margin: 4px 0 0 0 ;
+    margin: 6px 0 0 0 ;
     text-align: center;
     color: #ffffff;
 }
@@ -315,7 +316,7 @@ nav > h2 {
 }
 
 nav {
-    grid-area: "nav";
+    grid-area: nav;
     background-color: #030a8c;
 }
 
