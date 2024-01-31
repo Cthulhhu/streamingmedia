@@ -11,8 +11,11 @@ audio::-webkit-media-controls-enclosure {
     background-color: rgba(255, 255, 225, 0.3);
 }
 
-
-
+audio {
+    position: relative;
+    top: -205px;
+    margin-left: 6px;
+}
 
 /* scroll.txt file given*/
 #trending ::-webkit-scrollbar {
@@ -56,7 +59,7 @@ audio::-webkit-media-controls-enclosure {
 body {
     position: relative;
 }
-
+/* hamburger code*/
 ul {
     overflow: hidden;
     max-height: 0;
@@ -69,6 +72,8 @@ label {
     padding: 28px 20px;
     position: relative;
     user-select: none;
+    top: 0;
+    width: 20px;
 }
 
 label span {
@@ -137,12 +142,59 @@ h1 {
     font-size: 1.25em;
 }
 
+li {
+    color: #ffffff;
+    background-color: #030a8c;
+    padding: 5px 0;
+    text-align: center;
+}
+
+ul li:nth-child(1) a,  ul li:nth-child(1) a:visited,  ul li:nth-child(1) a:hover,  ul li:nth-child(1) a:active {
+    position: absolute;
+    top: 20px;
+    left: 105px;
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+
+ul li:nth-child(1) a,  ul li:nth-child(1) a:visited,  ul li:nth-child(1) a:hover,  ul li:nth-child(1) a:active {
+    text-transform: uppercase;
+}
+
+a, a:visited, a:hover, a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+li:hover {
+    background-color: #590242;
+}
+
+header p {
+    margin: 10px 30px 5px 30px;
+}
+
 h2, h3 {
     font-size: 1em;
 }
 
-p, dl, dd {
+p, dl, dt, dd {
  font-size: 1em;
+}
+
+dd, dt {
+    color: #590242;
+    margin: 0 2px 0 5px;
+}
+
+dt {
+    font-style: italic;
+}
+
+body > footer {
+    margin-top: 25px;
+    text-align: center;
 }
 
 footer p {
@@ -169,6 +221,119 @@ footer p {
     height: 50px;
     width: 350px;
 }
+
+#container .scroll {
+    display: grid;
+    grid-template-columns: repeat(5, 185px);
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+#container .scroll section {
+    height: 220px;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    text-align: center;
+}
+
+#container .scroll div {
+    height: 50px;
+    padding: 5px;
+    width: 350px;
+    top: 250px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+h2 {
+    color: #590242;
+    margin: 25px 0 5px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#trending .scroll h3 {
+    margin: 5px 0 8px 5px;
+    color: #590242;
+}
+
+#playlists .scroll h3, #curated .scroll h3 {
+    margin: 4px 0 0 0 ;
+    text-align: center;
+    color: #ffffff;
+}
+
+.scroll h3 {
+    margin: 3px 0 10px 5px;
+    color: #590242;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.scroll p {
+    margin: 5px 0 0 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+#trending a, #curated a, #playlists a {
+    margin: 10px 10px 15px 30px;
+    padding: 10px 20px;
+    width: 140px;
+    border-radius: 5px;
+    display: block;
+    background-color: #590242;
+    color: #ffffff;
+    text-align: center;
+}
+
+#trending a:hover, #curated a:hover, #playlists a:hover {
+    background-color: #020659;
+}
+
+dl {
+    display: flex;
+}
+
+#nav-container {
+    display: grid;
+    grid-template-areas: "nav" "header";
+}
+
+
+nav > h2 {
+    display: none;
+}
+
+nav {
+    grid-area: "nav";
+    background-color: #030a8c;
+}
+
+header {
+    color: #ffffff;
+    grid-area: header;
+    background: linear-gradient(.25turn, #2104d9, black);
+
+}
+
+#playlists .scroll {
+    background-color: #2699FB;
+}
+
+#playlists section {
+    background-color: #0D8DFB;
+}
+
+#curated .scroll {
+    background-color: #030a8c;
+}
+
+#curated section {
+    background-color: #020873;
+}
+
 
 @media screen and (min-width:834px) {
     ul {
@@ -204,5 +369,22 @@ footer p {
         flex: 1;
     }
 
+    #playlists .scroll, #curated .scroll {
+        display: flex;
+        height: 450px;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    #playlists .scroll img, #curated .scroll img {
+        float: left;
+    }
+
+    #trending a, #curated a, #playlists a {
+        display: block;
+        margin-right: 10px;
+        float: right;
+    }
 
 }
